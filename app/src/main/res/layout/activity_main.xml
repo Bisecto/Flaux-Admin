@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bisector.flauxad.MainActivity"
+    android:background="#EFEDED">
+    <include
+        android:id="@+id/tool"
+        layout="@layout/toolbar"></include>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_below="@id/tool"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPLOAD MOVIE"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+        <Spinner
+            android:layout_below="@id/tof"
+            android:id="@+id/to"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <Spinner
+            android:layout_below="@id/to"
+            android:id="@+id/to2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <VideoView
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/to2"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/videovew"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/videovew"
+            android:id="@+id/movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@drawable/butin"
+                android:textColor="@color/purple_700"
+                android:id="@+id/Selectmovie"
+                android:layout_below="@id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Select Movie"/>
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/title"
+                android:gravity="center"
+                android:layout_below="@id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter Movie Name"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/videoDescription"
+            android:layout_below="@id/movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter movie description"/>
+
+        <Button
+            android:background="@drawable/butin"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/videoDescription"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:onClick="Upload"
+            android:text="UPLOAD"/>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

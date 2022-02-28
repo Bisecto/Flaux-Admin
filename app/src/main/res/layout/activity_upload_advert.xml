@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bisector.flauxad.UploadAdvert"
+    android:background="#EFEDED">
+    <include
+        android:id="@+id/tool"
+        layout="@layout/toolbar"></include>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/AdvertImage"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" />
+    <Button
+        android:background="@drawable/butin"
+        android:id="@+id/SelectAD"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/AdvertImage"
+        android:textColor="@color/purple_700"
+        android:onClick="selectAd"
+        android:text="Select Image For Ad"/>
+    <EditText
+        android:id="@+id/Name_Company"
+        android:layout_margin="10dp"
+        android:layout_below="@id/SelectAD"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="Input The Company Name"/>
+    <EditText
+        android:id="@+id/DescriptionAboutAdvert"
+        android:layout_margin="10dp"
+        android:layout_below="@id/Name_Company"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="Describe What the Ad is All About"/>
+    <EditText
+        android:id="@+id/Website"
+        android:layout_margin="10dp"
+        android:layout_below="@id/DescriptionAboutAdvert"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="Enter the url for users to visit"/>
+    <EditText
+        android:id="@+id/Email"
+        android:layout_margin="10dp"
+        android:layout_below="@id/Website"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="Enter the Email for users to visit"/>
+    <Button
+        android:background="@drawable/butin"
+        android:textColor="@color/purple_700"
+        android:id="@+id/Upload_Ad"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Upload Advert"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/Email"
+        android:onClick="UploadAd"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

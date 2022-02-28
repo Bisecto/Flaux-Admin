@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bisector.flauxad.AdminLoginPage">
+
+    <include
+        layout="@layout/toolbar">
+
+    </include>
+<EditText
+    android:layout_margin="20dp"
+    android:layout_centerInParent="true"
+    android:id="@+id/Admin_Unique_Code"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Enter Admin's Unique Code"/>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/Admin_Unique_Code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/Admin_Login"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/progressbar"
+        android:text="Enter"/>
+</RelativeLayout>

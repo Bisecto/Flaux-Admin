@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bisector.flauxad.UploadingThumbail"
+    android:background="#EFEDED"
+    >
+    <include
+        android:id="@+id/tool"
+        layout="@layout/toolbar"></include>
+    <RelativeLayout
+        android:id="@+id/selectLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+<LinearLayout
+    android:id="@+id/id"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Select Movie Type"
+    android:textSize="20sp"
+    android:textColor="@color/black"/>
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kids Movies"
+            android:textSize="15sp"/>
+        <RadioButton
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Movies"
+            android:textSize="15sp"/>
+        <RadioButton
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Movies"
+            android:textSize="15sp"/>
+        <RadioButton
+            android:id="@+id/four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Old Movies"
+            android:textSize="15sp"/>
+    </RadioGroup>
+</LinearLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/id"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+    <Button
+        android:background="@drawable/butin"
+        android:id="@+id/selectThumb"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/selectLayout"
+        android:textColor="@color/purple_700"
+        android:text="Select Thumbn"/>
+    <TextView
+        android:id="@+id/selected"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/selectThumb"
+        android:layout_below="@id/selectLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="No Thumbnail Selected"/>
+    <Button
+        android:background="@drawable/butin"
+        android:textColor="@color/purple_700"
+        android:id="@+id/Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Upload Thumbnail"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/selectThumb"/>
+</RelativeLayout>

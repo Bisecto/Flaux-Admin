@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#FF1744">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:text="1"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/Name_Of_Users"
+            android:layout_width="match_parent"
+            android:layout_height="25sp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:text="Okafor precious"
+            android:textSize="14sp"
+            android:layout_marginLeft="75dp" />
+
+        <TextView
+            android:id="@+id/Email_Of_Users"
+            android:layout_width="match_parent"
+            android:layout_height="25sp"
+            android:layout_marginTop="30dp"
+            android:ellipsize="end"
+            android:text="Cprecious038@GMAIL.COM"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginLeft="75dp" />
+    </RelativeLayout>
+</RelativeLayout>
